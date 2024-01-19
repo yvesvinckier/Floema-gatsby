@@ -1,0 +1,40 @@
+{
+  "Main": {
+    "gallery": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Image"
+            }
+          }
+        },
+        "label": "Gallery"
+      }
+    },
+    "collection": {
+      "type": "Text",
+      "config": {
+        "label": "Collection"
+      }
+    },
+    "collections": {
+      "type": "Link",
+      "config": {
+        "select": "document",
+        "customtypes": ["collections"],
+        "label": "Collections"
+      }
+    },
+    "button": {
+      "type": "Text",
+      "config": {
+        "label": "Button"
+      }
+    }
+  }
+}

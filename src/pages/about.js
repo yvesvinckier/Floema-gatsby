@@ -7,12 +7,12 @@ const headingStyles = {
   marginTop: 400,
 };
 
-const IndexPage = () => {
+const AboutPage = () => {
   return (
     <>
-      <h1 style={headingStyles}>Home</h1>
+      <h1 style={headingStyles}>About</h1>
     </>
   );
 };
 
-export default IndexPage;
+export default AboutPage;
