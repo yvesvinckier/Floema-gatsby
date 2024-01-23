@@ -36,6 +36,8 @@ module.exports = {
         schemas: {
           home: require("./custom_types/home.json"),
           navigation: require("./custom_types/navigation.json"),
+          collections: require("./custom_types/collections.json"),
+          collection: require("./custom_types/collection.json"),
         },
       },
     },

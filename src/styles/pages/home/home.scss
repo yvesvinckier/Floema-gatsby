@@ -16,7 +16,7 @@
 
   &:before,
   &:after {
-    content: '';
+    content: "";
     height: 35rem;
     left: 0;
     position: absolute;
@@ -74,7 +74,7 @@
   width: 100%;
   visibility: hidden;
 
-  @include media('<=phone') {
+  @include media("<=phone") {
     padding: 0 1.5rem;
   }
 }
@@ -99,7 +99,7 @@
     transform: translateY(40rem);
   }
 
-  @include media('<=phone') {
+  @include media("<=phone") {
     padding: 1.5rem;
     width: 50%;
 
@@ -143,7 +143,7 @@
     vertical-align: middle;
   }
 
-  @include media('<phone') {
+  @include media("<phone") {
     bottom: 7.5rem;
     height: 13.7rem;
     width: 55rem;
