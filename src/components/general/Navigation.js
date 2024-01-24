@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
-import gsap from "gsap"; // <-- import GSAP
-import { useGSAP } from "@gsap/react"; // <-- import the hook from our React package
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { useLocation } from "@reach/router";
 
 import { split } from "../../utils/text";
