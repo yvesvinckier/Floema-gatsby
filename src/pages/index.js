@@ -1,6 +1,7 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { graphql } from "gatsby";
-import { gsap } from "gsap";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 import Titles from "../components/Home/Titles";
 
@@ -8,7 +9,7 @@ const IndexPage = ({ data }) => {
   const element = useRef();
   const collections = data.allPrismicCollection.edges;
 
-  useEffect(() => {
+  useGSAP(() => {
     if (!element.current) return;
     element.current.classList.add("home--active");
     gsap.set(document.documentElement, {

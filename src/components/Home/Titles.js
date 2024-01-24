@@ -4,7 +4,7 @@ import normalizeWheel from "normalize-wheel";
 
 import { getOffset } from "../../utils/dom";
 import useTouchEvents from "../../hooks/useTouchEvent";
-import { gsap } from "gsap";
+import gsap from "gsap";
 
 const transformPrefix = Prefix("transform");
 
@@ -34,7 +34,7 @@ export default function Titles({ collections }) {
       window.removeEventListener("resize", onResize);
       cancelAnimationFrame(updateId);
     };
-  }, []);
+  });
 
   const onResize = () => {
     items.current.forEach((element) => {

@@ -1,7 +1,8 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
-import { gsap } from "gsap";
+import gsap from "gsap"; // <-- import GSAP
+import { useGSAP } from "@gsap/react"; // <-- import the hook from our React package
 import { useLocation } from "@reach/router";
 
 import { split } from "../../utils/text";
@@ -10,7 +11,7 @@ import { DEFAULT as ease } from "../../utils/easing";
 const LinkAnimation = ({ link, text }) => {
   const element = useRef();
 
-  useEffect(() => {
+  useGSAP(() => {
     if (element.current.children.length === 0) return;
 
     const text = element.current.children[0].textContent;
@@ -102,17 +103,20 @@ const Navigation = () => {
     }
   `);
 
-  useEffect(() => {
-    if (location.pathname === "/about/") {
-      gsap.set(navigation.current, { color: "#37384C" });
-      gsap.set(navigationItems.current[0], { autoAlpha: 1 });
-      gsap.set(navigationItems.current[1], { autoAlpha: 0 });
-    } else {
-      gsap.set(navigation.current, { color: "#F9F1E7" });
-      gsap.set(navigationItems.current[0], { autoAlpha: 0 });
-      gsap.set(navigationItems.current[1], { autoAlpha: 1 });
-    }
-  }, [location.pathname]);
+  useGSAP(
+    () => {
+      if (location.pathname === "/about/") {
+        gsap.set(navigation.current, { color: "#37384C" });
+        gsap.set(navigationItems.current[0], { autoAlpha: 1 });
+        gsap.set(navigationItems.current[1], { autoAlpha: 0 });
+      } else {
+        gsap.set(navigation.current, { color: "#F9F1E7" });
+        gsap.set(navigationItems.current[0], { autoAlpha: 0 });
+        gsap.set(navigationItems.current[1], { autoAlpha: 1 });
+      }
+    },
+    { dependencies: [location.pathname] }
+  );
 
   return (
     <nav className="navigation" ref={navigation}>
