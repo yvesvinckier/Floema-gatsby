@@ -72,7 +72,7 @@
   top: 0;
   transform: translateX(-50%);
   width: 100%;
-  // visibility: hidden;
+  visibility: hidden;
 
   @include media("<=phone") {
     padding: 0 1.5rem;

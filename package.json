@@ -19,6 +19,8 @@
     "@emotion/styled": "^11.11.0",
     "@gsap/react": "^2.1.0",
     "@prismicio/react": "^2.7.3",
+    "@react-three/drei": "^9.96.5",
+    "@react-three/fiber": "^8.15.15",
     "gatsby": "^5.13.1",
     "gatsby-plugin-emotion": "^8.13.0",
     "gatsby-plugin-image": "^3.13.0",
@@ -36,6 +38,11 @@
     "prefix": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.70.0"
+    "sass": "^1.70.0",
+    "three": "^0.160.1"
+  },
+  "devDependencies": {
+    "gatsby-plugin-glslify": "^1.0.2",
+    "glslify": "^7.1.1"
   }
 }

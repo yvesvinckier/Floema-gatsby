@@ -136,7 +136,6 @@ const Navigation = () => {
 
       <ul className="navgation__list">
         {data.prismicNavigation.data.list.map((item, index) => (
-          // console.log(item.link.slug)
           <li
             key={index}
             className="navigation__list__item"
